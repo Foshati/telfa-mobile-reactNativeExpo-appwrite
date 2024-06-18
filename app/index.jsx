@@ -4,7 +4,12 @@ import { Link } from "expo-router";
 const index = () => {
   return (
     <View style={styles.container}>
-      <Text>index</Text>
+      <Text className="text-blue-600">index</Text>
+      <Text className="text-blue-600">index</Text>
+      <Text className="text-blue-600">index</Text>
+      <Text className="text-blue-600">index</Text>
+      <Text className="text-blue-600">index</Text>
+      <Text className="text-blue-600">index</Text>
       <Link href="/profile" style={{ color: "blue" }}>
         go to profile
       </Link>

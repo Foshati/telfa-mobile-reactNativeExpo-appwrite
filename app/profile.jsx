@@ -4,7 +4,9 @@ import React from "react";
 const profile = () => {
   return (
     <View>
-      <Text>profile</Text>
+      <Text className="text-blue-600">profile</Text>
+      <Text className="text-blue-600">profile</Text>
+      <Text className="text-blue-600">profile</Text>
     </View>
   );
 };
