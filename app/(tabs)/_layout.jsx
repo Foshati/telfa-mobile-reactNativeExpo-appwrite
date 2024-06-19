@@ -1,10 +1,23 @@
 import React from "react";
 import { Tabs } from "expo-router";
-import { MaterialIcons } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import Colors from "../../constants/Colors";
+// import { View } from "react-native";
 
 export default function _layout() {
   return (
-    <Tabs>
+    <Tabs
+      screenOptions={{
+        tabBarStyle: {
+          backgroundColor: Colors.bgColor,
+          borderTopWidth: 0,
+          padding: 0,
+        },
+        tabBarShowLabel: false,
+        tabBarActiveTintColor: Colors.primaryColor,
+        tabBarInactiveTintColor: "#999",
+      }}
+    >
       <Tabs.Screen
         name="home"
         options={{
@@ -25,7 +38,9 @@ export default function _layout() {
         name="search"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="search" color={color} size={size} />
+            // <View className="p-4 bg-red-500 rounded-lg">
+            <Ionicons name="search-outline" size={size} color={color} />
+            // </View>
           ),
         }}
       />
@@ -48,3 +63,6 @@ export default function _layout() {
     </Tabs>
   );
 }
+
+
+// { color, size }  ؟  tabBarIcon  => API Tabs
