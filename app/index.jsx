@@ -1,29 +1,18 @@
-import { StyleSheet, Text, View } from "react-native";
+import { View, Text } from "react-native";
+import React from "react";
 import { Link } from "expo-router";
-
-const index = () => {
+import { Ionicons } from "@expo/vector-icons";
+export default function index() {
   return (
-    <View style={styles.container}>
+    <View className="flex items-center justify-center flex-1">
       <Text className="text-blue-600">index</Text>
       <Text className="text-blue-600">index</Text>
       <Text className="text-blue-600">index</Text>
       <Text className="text-blue-600">index</Text>
       <Text className="text-blue-600">index</Text>
       <Text className="text-blue-600">index</Text>
-      <Link href="/profile" style={{ color: "blue" }}>
-        go to profile
-      </Link>
+      <Ionicons name="logo-instagram" size={24} color="black" />
+      <Link href="/profile">go to profile</Link>
     </View>
   );
-};
-
-export default index;
-
-const styles = StyleSheet.create({
-  container: {
-    display: "flex",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+}
