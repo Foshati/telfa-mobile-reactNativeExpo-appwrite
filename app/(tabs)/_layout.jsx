@@ -1,10 +1,15 @@
 import React from "react";
 import { Tabs } from "expo-router";
-import { Ionicons, MaterialIcons } from "@expo/vector-icons";
+import {
+  AntDesign,
+  FontAwesome6,
+  MaterialIcons,
+  Octicons,
+} from "@expo/vector-icons";
 import Colors from "../../constants/Colors";
 // import { View } from "react-native";
 
-export default function _layout() {
+export default function Layout() {
   return (
     <Tabs
       screenOptions={{
@@ -22,7 +27,7 @@ export default function _layout() {
         name="home"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="home" size={size} color={color} />
+            <Octicons name="home" size={size} color={color} />
           ),
         }}
       />
@@ -35,20 +40,19 @@ export default function _layout() {
         }}
       />
       <Tabs.Screen
-        name="search"
+        name="post"
         options={{
           tabBarIcon: ({ color, size }) => (
             // <View className="p-4 bg-red-500 rounded-lg">
-            <Ionicons name="search-outline" size={size} color={color} />
-            // </View>
+            <FontAwesome6 name="circle-plus" size={24} color={color} /> // </View>
           ),
         }}
       />
       <Tabs.Screen
-        name="bookmarks"
+        name="message"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="bookmark" color={color} size={size} />
+            <AntDesign name="message1" color={color} size={24} />
           ),
         }}
       />
@@ -56,13 +60,12 @@ export default function _layout() {
         name="profile"
         options={{
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="person" size={size} color={color} />
+            <Octicons name="person" size={size} color={color} />
           ),
         }}
       />
     </Tabs>
   );
 }
-
 
 // { color, size }  ؟  tabBarIcon  => API Tabs

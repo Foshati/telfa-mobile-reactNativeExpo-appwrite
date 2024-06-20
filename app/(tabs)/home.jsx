@@ -1,18 +1,31 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { Link } from "expo-router";
+import { Stack } from "expo-router";
+import { Image, TouchableOpacity } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+
 export default function Home() {
   return (
-    <View className="flex items-center justify-center flex-1">
-      <Text className="text-blue-600">index</Text>
-      <Text className="text-blue-600">index</Text>
-      <Text className="text-blue-600">index</Text>
-      <Text className="text-blue-600">index</Text>
-      <Text className="text-blue-600">index</Text>
-      <Text className="text-blue-600">index</Text>
-      <Ionicons name="logo-instagram" size={24} color="black" />
-      <Link href="/profile">go to profile</Link>
-    </View>
+    <Stack.Screen
+      options={{
+        headerTransparent: true,
+        headerTitle: "",
+        headerLeft: () => (
+          <TouchableOpacity onPress={() => {}} className="mt-4 ml-4">
+            <Image
+              source={{
+                uri: "https://i.pravatar.cc/300",
+              }}
+              className="w-12 h-12 rounded-full "
+            />
+          </TouchableOpacity>
+        ),
+
+        headerRight: () => (
+          <TouchableOpacity onPress={() => {}} className="mt-4 mr-4 ">
+            <Ionicons name="notifications" size={24} color="black" />
+          </TouchableOpacity>
+        ),
+      }}
+    />
   );
 }
